@@ -1,0 +1,14 @@
+{
+  "name": "patika-dev-logs-mongodb-sink",
+  "config": {
+    "connector.class": "com.mongodb.kafka.connect.MongoSinkConnector",
+    "topics": "patika.logs",
+    "connection.uri": "mongodb://mongo1",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": false,
+    "database": "patika",
+    "collection": "logs"
+  }
+}
+
